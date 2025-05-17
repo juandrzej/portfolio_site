@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}Projects | Andrzej Zięba{% endblock %}
+
+{% block content %}
+<section class="projects-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 text-tokyo-light">My <span class="text-tokyo-blue">Projects</span></h2>
+        <div class="row">
+            <!-- Kubernetes Cluster -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 bg-tokyo-dark border-tokyo-darker">
+                    <div class="card-body">
+                        <h3 class="card-title text-tokyo-light">100 Days of Python Challenge</h3>
+                        <p class="card-text text-tokyo-light">
+			    A comprehensive portfolio of Python projects developed during an intensive 100-day coding challenge.
+			    This repository showcases my progression from fundamental concepts to advanced Python programming
+			</p>
+                        <div class="badges mb-3">
+                            <span class="badge bg-tokyo-blue">Python</span>
+                            <span class="badge bg-tokyo-purple">Flask</span>
+                            <span class="badge bg-tokyo-red">SQLite</span>
+                        </div>
+                        <a href="https://github.com/juandrzej/100days_of_code" class="btn btn-tokyo-blue">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Terraform Modules -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 bg-tokyo-dark border-tokyo-darker">
+                    <div class="card-body">
+                        <h3 class="card-title text-tokyo-light">2vi2_bot - Discord Gaming Bot</h3>
+                        <p class="card-text text-tokyo-light">
+            		    A sophisticated Discord bot built with Python, designed to enhance gaming community by:
+            		    automated game reporting system, real-time results tracking and website integration for comprehensive statistics.
+			</p>
+                        <div class="badges mb-3">
+                            <span class="badge bg-tokyo-blue">Python</span>
+                            <span class="badge bg-tokyo-purple">Server deployment; used 24/7</span>
+			    <span class="badge bg-tokyo-red">Over 100 active users!</span>
+                        </div>
+                        <a href="https://github.com/juandrzej/2vi2_bot" class="btn btn-tokyo-blue">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CI/CD Pipeline -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 bg-tokyo-dark border-tokyo-darker">
+                    <div class="card-body">
+                        <h3 class="card-title text-tokyo-light">Development Environment Configuration (Dotfiles)</h3>
+                        <p class="card-text text-tokyo-light">
+			    A carefully curated collection of dotfiles for optimizing development workflow and system configuration.
+			    This repository showcases expertise in shell scripting and system administration, featuring customized
+			    configurations for enhanced productivity and development efficiency.
+			</p>
+                        <div class="badges mb-3">
+                            <span class="badge bg-tokyo-blue">Bash scripting</span>
+                            <span class="badge bg-tokyo-purple">Linux comprehension</span>
+                            <span class="badge bg-tokyo-red">Dedication to optimization</span>
+                        </div>
+                        <a href="https://github.com/juandrzej/dotfiles" class="btn btn-tokyo-blue">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Monitoring Stack -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 bg-tokyo-dark border-tokyo-darker">
+                    <div class="card-body">
+                        <h3 class="card-title text-tokyo-light">Trade Processing System</h3>
+                        <p class="card-text text-tokyo-light">
+			    Used daily across several teams without any issues.
+			    A Python-based trade processing system designed for efficient handling and analysis of financial trading data. 
+			    This project demonstrates expertise in financial data processing and automation of trading workflows.
+			</p>
+                        <div class="badges mb-3">
+                            <span class="badge bg-tokyo-blue">Python</span>
+                            <span class="badge bg-tokyo-purple">Pandas</span>
+                            <span class="badge bg-tokyo-red">OOP; dataclasses, Abstract Base Classes</span>
+                        </div>
+                        <a href="#" class="btn btn-tokyo-blue">Cannot share source code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- This Portfolio -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 bg-tokyo-dark border-tokyo-darker">
+                    <div class="card-body">
+                        <h3 class="card-title text-tokyo-light">Admin Tax & Fees Manager</h3>
+                        <p class="card-text text-tokyo-light">
+			    Used daily across several teams without any issues.
+			    A specialized administrative tool developed for managing and calculating tax and fee structures. 
+			    This solution streamlines financial administrative processes and ensures accurate fee calculations.
+			</p>
+                        <div class="badges mb-3">
+                            <span class="badge bg-tokyo-blue">Python</span>
+                            <span class="badge bg-tokyo-purple">Pandas</span>
+                            <span class="badge bg-tokyo-red">Pytest, logging</span>
+                        </div>
+                        <a href="#" class="btn btn-tokyo-blue">Cannot share source code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
