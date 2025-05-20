@@ -1,6 +1,6 @@
 ### Create symlink, relaod, and prepare system autorun
 ```
-236  sudo ln -s /home/juandrzej/portfolio_site/portfolio_site.service /etc/systemd/system
+sudo ln -s /home/juandrzej/portfolio_site/portfolio_site.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start portfolio_site
 sudo systemctl enable portfolio_site  # For auto-start on boot
