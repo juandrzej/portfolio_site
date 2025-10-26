@@ -9,7 +9,6 @@ Group=juandrzej
 Restart=always
 RestartSec=5s
 WorkingDirectory=/home/juandrzej/portfolio_site
-EnvironmentFile=/home/juandrzej/portfolio_site/.env
 ExecStart=/home/juandrzej/portfolio_site/venv/bin/python app.py
 StandardOutput=journal
 StandardError=journal
