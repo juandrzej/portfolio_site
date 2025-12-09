@@ -1,0 +1,307 @@
+{% extends "base.html" %}
+
+{% block title %}Recydywa zabójstw - Analiza{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="text-center mb-5">
+    <h1 class="display-4 text-tokyo-lighter mb-3">Recydywa zabójstw</h1>
+    <p class="lead text-tokyo-light">Analiza danych i statystyk dotyczących ponownych przestępstw</p>
+</section>
+
+<!-- Problemy badawcze -->
+<section id="problemy-badawcze" class="mb-5">
+    <h2 class="text-tokyo-lighter text-center mb-4">Problemy badawcze</h2>
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card tokyo-card p-4">
+                <h4 class="text-tokyo-blue mb-3"><i class="fas fa-exclamation-triangle me-2"></i>1. Niezgłaszanie przestępstw</h4>
+                <p class="text-tokyo-light">Generalnie mniejszy problem przy zabójstwach, ale szacunkowo <span class="badge bg-tokyo-red">&gt;1/3 bez skazania</span></p>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+            <div class="card tokyo-card p-4">
+                <h4 class="text-tokyo-blue mb-3"><i class="fas fa-list-ul me-2"></i>2. Różne definicje recydyw</h4>
+                <ul class="list-unstyled text-tokyo-light">
+                    <li class="mb-2"><span class="badge bg-tokyo-purple">Rearrest</span> – ile czasu po liczymy (3-5 lat zazwyczaj)</li>
+                    <li class="mb-2"><span class="badge bg-tokyo-purple">Return-to-prison</span> – nowe skazanie albo naruszenie warunku</li>
+                    <li class="mb-2"><span class="badge bg-tokyo-purple">Reconviction</span></li>
+                    <li class="mb-2"><span class="badge bg-tokyo-purple">New-crime reincarceration</span> – nowe skazanie z pozbawieniem wolności</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Rozwinięcie -->
+<section id="rozwinięcie" class="mb-5">
+    <h2 class="text-tokyo-lighter text-center mb-4">Rozwinięcie problemów badawczych</h2>
+    <div class="card tokyo-card p-4">
+        <ul class="text-tokyo-light">
+            <li class="mb-2"><strong class="text-tokyo-yellow">Rearrest</strong> – nie każde aresztowanie właściwie identyfikuje sprawcę</li>
+            <li class="mb-2"><strong class="text-tokyo-yellow">Reconviction & reincarceration</strong> – czasem sądy cofają zwolnienie warunkowe zamiast nowego skazania (rzadziej przy poważniejszych przestępstwach)</li>
+            <li class="mb-2">Branie pod uwagę różnych rodzaji zabójstw (murder vs manslaughter)</li>
+            <li class="mb-2">Recydywy zabójstw raczej będą bardziej miarodajne</li>
+            <li class="mb-2">Organy ścigania często kładą większy nacisk na rozwiązanie cięższych przestępstw, więc mogą być one overrepresented</li>
+            <li class="mb-2">Ponowne skazanie za zabójstwo to często bardzo mała próbka</li>
+            <li class="mb-2">W ogóle nie wszystkie badania przedstawiają konkretnie za co było ponowne skazanie</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Dane USA -->
+<section id="dane-usa" class="mb-5">
+    <h2 class="text-tokyo-lighter text-center mb-4">Dane z USA</h2>
+    
+    <h3 class="text-tokyo-blue mb-3"><i class="fas fa-flag-usa me-2"></i>Bureau of Justice Statistics 2005</h3>
+    <div class="row g-3 mb-4">
+        <div class="col-md-6">
+            <div class="card tokyo-card p-3">
+                <h5 class="text-tokyo-teal mb-3">Wszystkie przestępstwa (3 lata)</h5>
+                <ul class="list-unstyled text-tokyo-light small">
+                    <li><i class="fas fa-circle text-tokyo-green me-2" style="font-size: 0.5rem;"></i>68% rearrested</li>
+                    <li><i class="fas fa-circle text-tokyo-yellow me-2" style="font-size: 0.5rem;"></i>50% returned to prison</li>
+                    <li><i class="fas fa-circle text-tokyo-orange me-2" style="font-size: 0.5rem;"></i>45% reconvicted</li>
+                    <li><i class="fas fa-circle text-tokyo-red me-2" style="font-size: 0.5rem;"></i>22% new-crime reincarceration</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card tokyo-card p-3">
+                <h5 class="text-tokyo-teal mb-3">Przestępstwa z użyciem przemocy (3 lata)</h5>
+                <ul class="list-unstyled text-tokyo-light small">
+                    <li><i class="fas fa-circle text-tokyo-green me-2" style="font-size: 0.5rem;"></i>62% rearrested</li>
+                    <li><i class="fas fa-circle text-tokyo-yellow me-2" style="font-size: 0.5rem;"></i>45% returned to prison</li>
+                    <li><i class="fas fa-circle text-tokyo-orange me-2" style="font-size: 0.5rem;"></i>37% reconvicted</li>
+                    <li><i class="fas fa-circle text-tokyo-red me-2" style="font-size: 0.5rem;"></i>20% new-crime reincarceration</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card tokyo-card p-3">
+                <h5 class="text-tokyo-teal mb-3">Rearrested (5 lat)</h5>
+                <ul class="list-unstyled text-tokyo-light small">
+                    <li><i class="fas fa-crosshairs text-tokyo-red me-2"></i>Zabójstwa: <strong>51.2%</strong></li>
+                    <li><i class="fas fa-fist-raised text-tokyo-orange me-2"></i>Z użyciem przemocy: 71.3%</li>
+                    <li><i class="fas fa-users text-tokyo-yellow me-2"></i>Wszystkie: 76.6%</li>
+                    <li><i class="fas fa-shopping-bag text-tokyo-green me-2"></i>Na mieniu: 82.1%</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card bg-tokyo-darkest border border-tokyo-red p-3">
+                <h5 class="text-tokyo-red mb-3"><i class="fas fa-redo-alt me-2"></i>"Stickiness"</h5>
+                <ul class="list-unstyled text-tokyo-light small">
+                    <li class="mb-2"><span class="badge bg-tokyo-red">2.1%</span> zabójstwo → zabójstwo</li>
+                    <li class="mb-2"><span class="badge bg-tokyo-orange">1.1%</span> z użyciem przemocy → zabójstwo</li>
+                    <li class="mb-2"><span class="badge bg-tokyo-yellow">0.8%</span> na mieniu → zabójstwo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="text-tokyo-blue mb-3 mt-5"><i class="fas fa-flag-usa me-2"></i>Bureau of Justice Statistics 1994</h3>
+    <div class="row g-3 mb-4">
+        <div class="col-md-6">
+            <div class="card tokyo-card p-3">
+                <h5 class="text-tokyo-teal mb-3">Rearrested (5 lat)</h5>
+                <ul class="list-unstyled text-tokyo-light small">
+                    <li><i class="fas fa-crosshairs text-tokyo-red me-2"></i>Zabójstwa: <strong>40.7%</strong></li>
+                    <li><i class="fas fa-fist-raised text-tokyo-orange me-2"></i>Z użyciem przemocy: 61.7%</li>
+                    <li><i class="fas fa-users text-tokyo-yellow me-2"></i>Wszystkie: 67.5%</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card bg-tokyo-darkest border border-tokyo-red p-3">
+                <h5 class="text-tokyo-red mb-3"><i class="fas fa-redo-alt me-2"></i>"Stickiness"</h5>
+                <ul class="list-unstyled text-tokyo-light small">
+                    <li class="mb-2"><span class="badge bg-tokyo-red">1.2%</span> zabójstwo → zabójstwo</li>
+                    <li class="mb-2"><span class="badge bg-tokyo-orange">1.1%</span> z użyciem przemocy → zabójstwo</li>
+                    <li class="mb-2"><span class="badge bg-tokyo-yellow">0.8%</span> na mieniu → zabójstwo</li>
+                    <li class="mb-2"><span class="badge bg-tokyo-green">2.4%</span> kradzież pojazdu → zabójstwo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="text-tokyo-blue mb-3 mt-5"><i class="fas fa-balance-scale me-2"></i>U.S. Sentencing Commission 2019</h3>
+    <div class="card tokyo-card p-4">
+        <h5 class="text-tokyo-teal mb-3">Z użyciem przemocy vs bez + X</h5>
+        <div class="row text-tokyo-light small">
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <li class="mb-2">45.3% vs 23.6% – cokolwiek z użyciem przemocy</li>
+                    <li class="mb-2">15.1% vs 1.9% – robbery</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <li class="mb-2">3.6% vs 1.5% – gwałt</li>
+                    <li class="mb-2">1.8% vs 0.9% – zabójstwo</li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-tokyo-light small mt-2 mb-0"><em>Spadek z wiekiem + długość pozbawienia wolności + stickiness jak w BJS.</em></p>
+    </div>
+</section>
+
+<!-- Dane ze stanów -->
+<section id="dane-stany" class="mb-5">
+    <h2 class="text-tokyo-lighter text-center mb-4">Dane z poszczególnych stanów</h2>
+
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="card bg-tokyo-darkest border border-tokyo-green p-4">
+                <h4 class="text-tokyo-green mb-3"><i class="fas fa-map-marker-alt me-2"></i>California (50yo, 20yos)</h4>
+                <p class="text-tokyo-light mb-2"><strong>Na warunkowym zwolnieniu, skazani za "murder":</strong></p>
+                <ul class="list-unstyled text-tokyo-light small">
+                    <li class="mb-2"><span class="badge bg-tokyo-green">&lt;1%</span> Tylko 5 skazanych ponownie za cokolwiek</li>
+                    <li class="mb-2"><span class="badge bg-tokyo-green">0%</span> Nikt nie został ponownie skazany za przestępstwo zagrożone karą dożywocia</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card bg-tokyo-darkest border border-tokyo-green p-4">
+                <h4 class="text-tokyo-green mb-3"><i class="fas fa-map-marker-alt me-2"></i>Maryland (64yo, 39yos)</h4>
+                <p class="text-tokyo-light mb-2"><strong>Wypuszczono 190 z 237 (80%+ za murder):</strong></p>
+                <ul class="list-unstyled text-tokyo-light small">
+                    <li class="mb-2"><span class="badge bg-tokyo-green">~3%</span> 5 osób skazana za przestępstwo z użyciem przemocy</li>
+                    <li class="mb-2"><span class="badge bg-tokyo-green">0%</span> Nikt nie został skazany ponownie za murder</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card tokyo-card p-4">
+                <h4 class="text-tokyo-blue mb-3"><i class="fas fa-map-marker-alt me-2"></i>Michigan</h4>
+                <ul class="list-unstyled text-tokyo-light small">
+                    <li class="mb-2">5.7% zabójstwo + cokolwiek</li>
+                    <li class="mb-2">16.7% cokolwiek + cokolwiek</li>
+                    <li class="mb-2"><span class="badge bg-tokyo-red">0.2%</span> zabójstwo + zabójstwo (2 osoby)</li>
+                    <li class="mb-2">1.5% zabójstwo + z użyciem przemocy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card tokyo-card p-4">
+                <h4 class="text-tokyo-blue mb-3"><i class="fas fa-map-marker-alt me-2"></i>New Jersey</h4>
+                <div class="mb-3">
+                    <p class="text-tokyo-teal mb-1"><strong>Badanie 1 (336 osób):</strong></p>
+                    <ul class="list-unstyled text-tokyo-light small">
+                        <li>9% z użyciem przemocy</li>
+                        <li><span class="badge bg-tokyo-green">0%</span> zabójstwo</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-tokyo-teal mb-1"><strong>Badanie 2 (320 osób):</strong></p>
+                    <ul class="list-unstyled text-tokyo-light small">
+                        <li>12% z użyciem przemocy</li>
+                        <li><span class="badge bg-tokyo-green">0%</span> zabójstwo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card tokyo-card p-4">
+                <h4 class="text-tokyo-blue mb-3"><i class="fas fa-map-marker-alt me-2"></i>New York</h4>
+                <p class="text-tokyo-teal mb-2"><strong>X + pozbawienie wolności za cokolwiek:</strong></p>
+                <ul class="list-unstyled text-tokyo-light small">
+                    <li class="mb-2">Z użyciem przemocy: 14.1% | Średnia: 14.5%</li>
+                    <li class="mb-2">Murder: 1.9% | Attempted: 7.8%</li>
+                    <li class="mb-2">Manslaughter: 6.6% | Rape: 8.2%</li>
+                    <li class="mb-2 mt-3"><span class="badge bg-tokyo-red">0.3%</span> zabójstwo → zabójstwo</li>
+                    <li class="mb-2"><span class="badge bg-tokyo-red">0.2%</span> murder/attempted → murder/attempted</li>
+                    <li class="mb-2">3.9% cokolwiek + cokolwiek (65+ lat)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card tokyo-card p-4">
+                <h4 class="text-tokyo-blue mb-3"><i class="fas fa-map-marker-alt me-2"></i>Pennsylvania</h4>
+                <p class="text-tokyo-teal mb-2"><strong>X + aresztowanie za cokolwiek:</strong></p>
+                <ul class="list-unstyled text-tokyo-light small">
+                    <li class="mb-2">Z użyciem przemocy: 45.6%</li>
+                    <li class="mb-2">Na mieniu: 52.7%</li>
+                    <li class="mb-2">Murder/manslaughter: 33%</li>
+                </ul>
+                <p class="text-tokyo-teal mb-2 mt-3"><strong>Stickiness:</strong></p>
+                <ul class="list-unstyled text-tokyo-light small">
+                    <li class="mb-2">13% (z użyciem przemocy + z użyciem przemocy)</li>
+                    <li class="mb-2">7% (bez użycia przemocy + z użyciem przemocy)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Dane międzynarodowe -->
+<section id="dane-międzynarodowe" class="mb-5">
+    <h2 class="text-tokyo-lighter text-center mb-4">Studia międzynarodowe</h2>
+    <div class="card tokyo-card p-4">
+        <h4 class="text-tokyo-purple mb-3"><i class="fas fa-globe me-2"></i>Zabójstwo → zabójstwo: najczęściej 1%–3.5%</h4>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="border border-tokyo-darkest rounded p-3">
+                    <h5 class="text-tokyo-blue">Finlandia</h5>
+                    <p class="text-tokyo-light mb-0"><span class="badge bg-tokyo-purple">2.3%–3.3%</span></p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="border border-tokyo-darkest rounded p-3">
+                    <h5 class="text-tokyo-blue">Holandia</h5>
+                    <p class="text-tokyo-light mb-2"><span class="badge bg-tokyo-orange">25%</span> (zabójstwo + przestępstwo)</p>
+                    <p class="text-tokyo-light small mb-0"><em>Długość pozbawienia wolności nie sprzyja obniżeniu recydywy</em></p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="border border-tokyo-darkest rounded p-3">
+                    <h5 class="text-tokyo-blue">Szwecja</h5>
+                    <p class="text-tokyo-light mb-0">
+                        <span class="badge bg-tokyo-red">~3%</span> (zabójstwo + śmierć)<br>
+                        <span class="badge bg-tokyo-yellow">10%</span> (zabójstwo + przemoc)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ciekawostki -->
+<section id="ciekawostki" class="mb-5">
+    <h2 class="text-tokyo-lighter text-center mb-4">Ciekawostki</h2>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="card bg-tokyo-darkest border border-tokyo-purple p-4 text-center">
+                <i class="fas fa-percentage fa-3x text-tokyo-purple mb-3"></i>
+                <h3 class="text-tokyo-purple mb-2">0.006%</h3>
+                <p class="text-tokyo-light mb-0">populacji popełnia zabójstwo w danym roku</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card bg-tokyo-darkest border border-tokyo-red p-4 text-center">
+                <i class="fas fa-user-shield fa-3x text-tokyo-red mb-3"></i>
+                <h3 class="text-tokyo-red mb-2">0.75%</h3>
+                <p class="text-tokyo-light mb-0">skumulowane ryzyko zostania ofiarą zabójstwa w ciągu życia</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pytania -->
+<section id="pytania" class="mb-5">
+    <h2 class="text-tokyo-lighter text-center mb-4">Pytania do dyskusji</h2>
+    <div class="card tokyo-card p-4">
+        <ol class="text-tokyo-light">
+            <li class="mb-3 fs-5">Jak bardzo byście zaryzykowali z potencjalnymi reformami?</li>
+            <li class="fs-5">Dane vs funkcje prawa karnego (przede wszystkim prewencyjna)</li>
+        </ol>
+    </div>
+</section>
+
+{% endblock %}
