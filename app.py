@@ -24,7 +24,7 @@ def contact():
     return render_template("contact.html")
 
 @app.route("/recydywy")
-def contact():
+def recydywy():
     return render_template("recydywy.html")
 
 if __name__ == "__main__":
